@@ -1,0 +1,38 @@
+# Project XXX
+
+XXX is a Text-to-SQL chatbot designed to answer soccer-related questions. It translates natural language queries into SQL commands to retrieve relevant information from a cloth database.
+
+## Configuration
+
+The `src/config.yaml` file contains the configurations for API keys and database connections. Ensure you update this file with your specific API keys and database credentials before running the chatbot.
+
+```yaml
+api_keys:
+    openai: YOUR_OPENAI_API_KEY
+    other_service: YOUR_OTHER_SERVICE_API_KEY
+
+database:
+    host: YOUR_DATABASE_HOST
+    port: YOUR_DATABASE_PORT
+    user: YOUR_DATABASE_USER
+    password: YOUR_DATABASE_PASSWORD
+    name: YOUR_DATABASE_NAME
+```
+
+This function connects to a PostgreSQL database and performs operations on it.
+
+
+# Data Tables
+Tables are created with the notebook in `notebooks/001-create-postgresql-initial-tables.ipynb`.
+
+
+To run this script, execute the following command:
+```python
+python src/main.py
+```
+
+This will start the application and perform the necessary operations as defined in the main function.
+
+
+# UI
+The user interface is built with Gradio, allowing users to ask questions directly to the database.
